@@ -10,6 +10,17 @@ var orm = {
           cb(res);
         });
     },
+
+// var orm = {
+//     selectAll: (table, cb) => {
+//         var queryString = `SELECT * FROM ${table};`;
+//         connection.query(queryString, function(err, res) {
+//           if (err) {
+//             throw err;
+//           }
+//           cb(res);
+//         });
+//     },
     insertOne: (table, cols, vals, cb) => {
         let queryString = `INSERT INTO ${table} (${cols}) VALUES ("${vals}");`;
         connection.query(queryString, function(err, res) {
